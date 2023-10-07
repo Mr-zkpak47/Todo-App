@@ -288,8 +288,6 @@
   border: none;
   cursor: pointer;
   box-shadow: 0px 0px 2px 1px black;
-  transition: 5s;
-  transition-delay: 5s;
 }
 
 .card .cardStructure .cardHeader .cross i {
