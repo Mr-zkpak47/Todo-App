@@ -194,7 +194,7 @@ function App() {
       const cardBeingHidden = prevItems.find((item) => item.id === id);
       if (cardBeingHidden && cardBeingHidden.cardStatus === true) {
         // If it's completed, decrement the complete counter by 1
-        setComplete((prevComplete) => prevComplete - .5);
+        setComplete((prevComplete) => prevComplete - 1);
       }
       console.log(color)
       return updatedItems;
@@ -223,12 +223,12 @@ function App() {
       if (cardBeingUpdated) {
         if (cardBeingUpdated.cardStatus === false) {
           // If it changes to pending, decrement the complete counter
-          setComplete((prevComplete) => prevComplete - .5);
+          setComplete((prevComplete) => prevComplete - 1);
           document.body.querySelectorAll(".card")[cardBeingUpdated.id].style.backgroundColor = "#fdfdfd"
           document.body.querySelectorAll(".status")[cardBeingUpdated.id].style.backgroundColor = "chartreuse"
         } else {
           // If it changes to completed, increment the complete counter
-          setComplete((prevComplete) => prevComplete + .5);
+          setComplete((prevComplete) => prevComplete + 1);
           document.body.querySelectorAll(".card")[cardBeingUpdated.id].style.backgroundColor = "#7fff00ba"
           document.body.querySelectorAll(".status")[cardBeingUpdated.id].style.backgroundColor = "white"
 
